@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="../static/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <form method="post">
+        <div id="main_div">
+            <h1 id="header">Registration form</h1>
+
+            <!--/* first name input box */-->
+            <div class="input-box">
+                <i class="fa-duotone fa-solid fa-person"></i>
+                <input type="text" class="name" name="first_name" placeholder="First Name" required>
+            </div>
+                <!-- last name input box*/--> 
+             <div class="input-box">
+                <i class="fa-duotone fa-solid fa-person"></i>
+                <input type="text" name="last_name" class="name" placeholder="Last Name" required>
+            </div>
+                <!-- gmail input box*/-->
+            <div class="input-box">
+                <i class="fa-sharp-duotone fa-regular fa-envelopes-bulk"></i>
+                <input class="gmail" name="gmail" type="email" placeholder="Enter Gmail" required>
+            </div>
+               <!-- /* password input box*/-->
+             <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input class="gmail" name="password" type="text" placeholder="Enter password" required>
+            </div>
+               <!--/* confim password input box*/--> 
+             <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input class="gmail" name="confim_password" type="text" placeholder="conform password" required>
+            </div>
+
+              <!--/* radio button */-->  
+            <div class="gender-section">
+                <p>Gender:</p>
+                <div class="gender-row">
+                    <label class="gender-label">
+                    <input type="radio" name="gender" value="male"> Male
+                    </label>
+
+                    <label class="gender-label">
+                    <input type="radio" name="gender" value="female" required> Female
+                    </label>
+                </div>
+            </div>
+            <!--save button-->
+            <button type="submit" class="ragister-button">Save</button>
+
+           {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <script>alert("{{ message }}");</script>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+        </div>
+    </form>  
+</body>
+</html>

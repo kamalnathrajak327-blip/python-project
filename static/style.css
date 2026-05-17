@@ -1,0 +1,184 @@
+/* login page style body --*/
+body{
+    background-color: violet;
+}
+/* login page header--*/
+h1{
+    color: black;
+    text-align: center;
+    padding-top: 20px;  
+}
+/* login page main div --*/
+#outer_div{
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+/* login page  signup button  --*/
+a.bnt{
+    
+    text-decoration: none;
+    margin-left: 170px;
+    margin-top: 50px;
+    display: blue;
+     border-radius: 5px;
+    font-weight: bold
+
+
+}
+/* login page  login button and signup button more sytle  --*/
+button {
+    background-color: blue;
+    color: white;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+button:active {
+    background-color: pink;
+}
+
+/* login page  gmail input box and password --*/
+.input{
+    width: 320px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+/* login page  forgot password link  --*/
+a{
+   
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+/* login page  summit button  --*/
+.summit{
+    background-color: green;
+    color: white;
+     width: 320px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-left: 10px;
+
+}
+
+
+
+
+
+/* signup page style  --*/
+
+#header{
+    color: black;
+    text-align: center;
+    padding-top: 20px;  
+}
+/* signup page main div  --*/
+#main_div{
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+/* signup page   for all   icon  --*/
+/* wrapper */
+.input-box {
+    position: relative;
+    display: inline-block;
+}
+
+/* icon */
+.input-box i {
+    position: absolute;
+    left: 40px;   /* adjust according to margin */
+    top: 70%;
+    transform: translateY(-50%);
+    color: blue;
+}
+
+
+
+/* first name and last name */
+.name {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+
+    padding-left: 30px;  /* 🔥 icon ke liye space */
+}
+
+/* signup page gmail and password --*/
+.gmail{
+    width: 310px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+/* signup page redio button  --*/
+
+/* gender section */
+.gender-section {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* row me lane ke liye */
+.gender-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+/* label + text alignment */
+.gender-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 🔥 IMPORTANT: radio button fix */
+.gender-label input {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* signup page  save button  --*/
+.ragister-button{
+    background-color: green;
+    color: white;
+     width: 320px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-left: 10px;
+
+}

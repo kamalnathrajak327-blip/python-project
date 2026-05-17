@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <!--<link rel="stylesheet" href="../static/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    
+<body>
+     <form method="post">
+        <div id="outer_div">
+            <h1>Login form</h1>
+            <!--input box gmail and password-->
+            <input class="input" name="gmail" type="email" placeholder="Enter Gmail" required>
+            <input class="input" name="password" minlength="6" type="password" placeholder="Enter password" required>
+            <!--forgot password url-->
+            <a href="{{ url_for('forgot') }}">Forgot Password?</a>
+            <!--summite button-->
+            <button class="summit" type="submit">Login</button>
+            <!--ragestion page link-->
+            <a href="{{ url_for('signup') }}" class="bnt">Signup</a>
+        
+            <!--flask popup code with js-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <script>alert("{{ message }}");</script>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot password</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2;">
+
+    <form method="post" 
+          style="max-width: 400px; margin: 100px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        
+        <h1 style="text-align: center; color: #333;">Forgot Password</h1>
+
+        <input name="gmail" type="email" placeholder="Enter Gmail" required
+               style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
+
+        <input name="password" type="password" placeholder="Enter New Password" required
+               style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
+
+        <button type="submit"
+                style="width: 100%; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Reset Password
+        </button>
+    </form>
+ 
+   
+
+    {% if success %}
+    <script>alert("{{ success }}");</script>
+    {% endif %}
+
+</body>
+</html>
