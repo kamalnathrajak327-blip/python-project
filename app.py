@@ -1,13 +1,34 @@
 from flask import Flask, render_template, request,redirect,url_for,flash
-import pyodbc
+#import pyodbc
+import sqlite3
 app=Flask(__name__)
 app.secret_key = "secret123"
+
 #database connection
-conn=pyodbc.connect('Driver={SQL Server};'
-                    'Server=DESKTOP-1UMSK0Q\\KAMAL_LOCAL;'
-                    'Database=kamal;'
-                    'Trusted_Connection=yes;')
-cursor=conn.cursor()
+#conn=pyodbc.connect('Driver={SQL Server};'
+                   # 'Server=DESKTOP-1UMSK0Q\\KAMAL_LOCAL;'
+                    #'Database=kamal;'
+                    #'Trusted_Connection=yes;')
+#cursor=conn.cursor()
+
+
+conn = sqlite3.connect('database.db', check_same_thread=False)
+cursor = conn.cursor()
+
+# Create table
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT,
+    last_name TEXT,
+    gmail TEXT,
+    password TEXT,
+    gender TEXT
+)
+''')
+conn.commit()
+
+
 print("connection successful")
 #home page
 @app.route('/',methods=['GET', 'POST'])
@@ -80,4 +101,6 @@ def forgot():
     return render_template('forgot.html')
 
 
-app.run(debug=True)
+#app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
